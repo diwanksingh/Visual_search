@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useCallback, useTransition } from "react";
 import dynamic from "next/dynamic";
-import ResultsDeck from "/UI/ResultsDeck";
+import ResultsDeck from "@/components/UI/ResultsDeck";
 import { API_BASE } from "@/lib/api";
 
 const ScannerBox = dynamic(() => import("./UI/ScannerBox"), {

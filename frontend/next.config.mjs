@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack(config) {
-    return config;
-  },
-  turbopack: {}, // disables turbopack safely
+  /* config options here */
+  reactCompiler: true,
 };
 
 export default nextConfig;
