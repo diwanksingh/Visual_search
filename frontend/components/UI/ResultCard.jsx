@@ -28,12 +28,8 @@ return (
       >
         <div className="relative z-10 space-y-3">
           <Lens hovering={hovering} setHovering={setHovering}>
-            <img
-  src={product.image_url}
-  crossOrigin="anonymous"
-  decoding="async"
-  loading="lazy"
-  referrerPolicy="no-referrer"
+         <img
+  src={product.image_url.toLowerCase()}
   alt={product.style}
   className="rounded-2xl h-40 w-full object-contain bg-white p-2"
 />
