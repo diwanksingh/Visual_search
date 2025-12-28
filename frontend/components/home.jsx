@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import ResultsDeck from "/UI/ResultsDeck";
 import { API_BASE } from "@/lib/api";
 
-const ScannerBox = dynamic(() => import("/UI/ScannerBox"), {
+const ScannerBox = dynamic(() => import("./UI/ScannerBox"), {
   ssr: false,
   loading: () => (
     <div className="

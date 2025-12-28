@@ -1,7 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  /* config options here */
-  reactCompiler: true,
-};
+const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
 
-export default nextConfig;
+module.exports = {
+  webpack(config) {
+    config.plugins.push(new CaseSensitivePathsPlugin());
+    return config;
+  },
+};

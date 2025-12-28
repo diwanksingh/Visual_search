@@ -3,7 +3,7 @@ import { API_BASE } from "@/lib/api.js";
 import { useEffect, useState } from "react";
 import ResultCard from "@/components/UI/ResultCard";
 import ResultsLoader from "@/components/UI/ResultsLoader";
-import ColourfulText from "/UI/Colourful-text.jsx";
+import ColourfulText from "./UI/colourful-text.jsx";
 
 export default function Catalog() {
   const [products, setProducts] = useState(null);
