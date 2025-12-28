@@ -39,7 +39,7 @@ return (
           <motion.div animate={{ filter: hovering ? "blur(1px)" : "blur(0px)" }}>
             <div className="flex items-start justify-between">
               <p className="text-zinc-900 font-semibold text-sm leading-tight">
-              {product.name || `${product.style} Frame`}
+              {product.name || `${product.style} Frame` }
            </p>
             <span className="text-indigo-700 font-bold text-sm">
             ₹{product.price}
