@@ -46,7 +46,7 @@ export default function ScannerBox({
     const reader = new FileReader();
      reader.onload = () => {
       setPreview(reader.result);
-       localStorage.setItem("last_preview", reader.result);
+       localStorage.removeItem("last_preview")
     };
     reader.readAsDataURL(f);
   };
