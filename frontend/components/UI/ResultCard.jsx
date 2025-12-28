@@ -29,10 +29,15 @@ return (
         <div className="relative z-10 space-y-3">
           <Lens hovering={hovering} setHovering={setHovering}>
             <img
-              src={product.image_url}
-              alt={product.style}
-              className="rounded-2xl h-40 w-full object-contain bg-white p-2"
-            />
+  src={product.image_url}
+  crossOrigin="anonymous"
+  decoding="async"
+  loading="lazy"
+  referrerPolicy="no-referrer"
+  alt={product.style}
+  className="rounded-2xl h-40 w-full object-contain bg-white p-2"
+/>
+
           </Lens>
 
           <motion.div animate={{ filter: hovering ? "blur(1px)" : "blur(0px)" }}>
