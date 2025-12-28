@@ -1,7 +1,7 @@
 "use client";
 import { Upload } from "lucide-react";
 import { useState, useEffect } from "react";
-import ColourfulText from "../UI/colourful-text.jsx";
+import ColourfulText from "./Colourful-text.jsx";
 
 const STYLES = ["Aviator","Round","Square","Rimless","Transparent","Rectangle"];
 const MATERIALS = ["Metal","Plastic","Steel"];

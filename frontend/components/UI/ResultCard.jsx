@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Lens } from "./lens";
+import { Lens } from "./Lens";
 import { motion } from "framer-motion";
 import { API_BASE } from "@/lib/api";
 
