@@ -1,5 +1,5 @@
 "use client";
-
+import { API_BASE } from "@/lib/api.js";
 import { useEffect, useState } from "react";
 import ResultCard from "@/components/UI/ResultCard";
 import ResultsLoader from "@/components/UI/ResultsLoader";
@@ -10,15 +10,14 @@ export default function Catalog() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // grab full catalog once on page load
-    fetch("http://127.0.0.1:8000/products")
-      .then(r => r.json())
-      .then(d => {
-         setProducts(d.results || []);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
+  fetch(`${API_BASE}/products`)
+    .then(r => r.json())
+    .then(d => {
+      setProducts(d.results || []);
+      setLoading(false);
+    })
+    .catch(() => setLoading(false));
+}, []);
 
   if (loading) return <ResultsLoader />;
 

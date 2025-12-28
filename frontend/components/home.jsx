@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback, useTransition } from "react";
 import dynamic from "next/dynamic";
 import ResultsDeck from "./UI/ResultsDeck";
+import { API_BASE } from "@/lib/api";
 
 const ScannerBox = dynamic(() => import("./UI/ScannerBox"), {
   ssr: false,
@@ -15,8 +16,6 @@ const ScannerBox = dynamic(() => import("./UI/ScannerBox"), {
     " />
   ),
 });
-
-const API_BASE = "http://localhost:8000";
 
 export default function Home() {
   const [tag, setTag] = useState("");

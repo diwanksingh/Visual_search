@@ -2,16 +2,16 @@
 import { useState } from "react";
 import { Lens } from "../ui/lens";
 import { motion } from "framer-motion";
+import { API_BASE } from "@/lib/api";
 
 export default function ResultCard({ product }) {
   const [hovering, setHovering] = useState(false);
 
-  const ping = () => {
-    // let the backend know someone clicked this
-    fetch(`http://localhost:8000/click/${product.product_id}`, {
-      method: "POST",
-    }).catch(() => {});
-  };
+ const ping = () => {
+  fetch(`${API_BASE}/click/${product.product_id}`, {
+    method: "POST",
+  }).catch(() => {});
+};
 return (
     <a
       href={product.buy_url}
